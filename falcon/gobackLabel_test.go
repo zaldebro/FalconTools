@@ -12,8 +12,8 @@ import (
 func TestGoBackExpr (t *testing.T) {
 
 	myFalcon := FALCON{
-		AccessKeyId: "AKWS3GA5E6XCDMWEU4",
-		SecretAccessKeyId: "KHFTmVutRHamO5Tu2/S8EQqlSfgXfDgjQC/wwSvc",
+		AccessKeyId: "xxxxx",
+		SecretAccessKeyId: "xxxxxx",
 	}
 
 	status := myFalcon.GetApiKey()
