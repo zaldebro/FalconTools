@@ -8,8 +8,8 @@ import (
 
 func TestUpdateExprLabelsTmp (t *testing.T) {
 	myFalcon := falcon.FALCON{
-		AccessKeyId: "AKWS3GA5E6XCDMWEU4",
-		SecretAccessKeyId: "KHFTmVutRHamO5Tu2/S8EQqlSfgXfDgjQC/wwSvc",
+		AccessKeyId: "xxxx",
+		SecretAccessKeyId: "xxxxxxx",
 	}
 
 	status := myFalcon.GetApiKey()
@@ -52,8 +52,8 @@ func TestUpdateExprLabelsTmp (t *testing.T) {
 
 func TestUpdateExprLabels (t *testing.T) {
 	myFalcon := falcon.FALCON{
-		AccessKeyId: "AKWS3GA5E6XCDMWEU4",
-		SecretAccessKeyId: "KHFTmVutRHamO5Tu2/S8EQqlSfgXfDgjQC/wwSvc",
+		AccessKeyId: "xxxxx",
+		SecretAccessKeyId: "xxxxxxxxx",
 	}
 
 	status := myFalcon.GetApiKey()
@@ -124,8 +124,8 @@ func TestUpdateTemandStra (t *testing.T) {
 
 func TestModTempansStraTagByTempIDService (t *testing.T) {
 	myFalcon := falcon.FALCON{
-		AccessKeyId: "AKWS3GA5E6XCDMWEU4",
-		SecretAccessKeyId: "KHFTmVutRHamO5Tu2/S8EQqlSfgXfDgjQC/wwSvc",
+		AccessKeyId: "xxxx",
+		SecretAccessKeyId: "xxxxx",
 	}
 
 	status := myFalcon.GetApiKey()
