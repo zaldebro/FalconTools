@@ -12,8 +12,8 @@ import (
 //testPoint 22504
 func TestGetOnCallGroInfo (t *testing.T) {
 	myFalcon := falcon.FALCON{
-		AccessKeyId: "AKWS3GA5E6XCDMWEU4",
-		SecretAccessKeyId: "KHFTmVutRHamO5Tu2/S8EQqlSfgXfDgjQC/wwSvc",
+		AccessKeyId: "xxx",
+		SecretAccessKeyId: "xxxxxxxx",
 	}
 
 	status := myFalcon.GetApiKey()
@@ -32,8 +32,8 @@ func TestGetOnCallGroInfo (t *testing.T) {
 
 func TestGetExpressionsByOncallGroTmp (t *testing.T) {
 	myFalcon := falcon.FALCON{
-		AccessKeyId: "AKWS3GA5E6XCDMWEU4",
-		SecretAccessKeyId: "KHFTmVutRHamO5Tu2/S8EQqlSfgXfDgjQC/wwSvc",
+		AccessKeyId: "xxxx",
+		SecretAccessKeyId: "xxxxxxxx",
 	}
 
 	status := myFalcon.GetApiKey()
@@ -53,7 +53,7 @@ func TestGetExpressionsByOncallGroTmp (t *testing.T) {
 	// 定义并发部分
 	emit := func(offset int) {
 		defer wg.Done()
-		path := fmt.Sprintf("/expression/oncall/search?oncall=%s&limit=%d&offset=%v", onCallGroupName, limit, offset)
+		path := fmt.Sprintf("/xxxxx?oncall=%s&limit=%d&offset=%v", onCallGroupName, limit, offset)
 		if ans, err := myFalcon.GetInfos(path); err == nil{
 			var expressionsByOncallGro falcon.ExpressionsByOncallGroStruct
 			err = json.Unmarshal(*ans, &expressionsByOncallGro)
@@ -70,7 +70,7 @@ func TestGetExpressionsByOncallGroTmp (t *testing.T) {
 	}
 
 	// 默认 limit 为 100
-	path := fmt.Sprintf("/expression/oncall/search?oncall=%s&limit=%d", onCallGroupName, limit)
+	path := fmt.Sprintf("xxxxxxxxxxx?oncall=%s&limit=%d", onCallGroupName, limit)
 
 	if body, err := myFalcon.GetInfos(path); err == nil {
 		err = json.Unmarshal(*body, &expressionsByOncallGroList)
@@ -97,8 +97,8 @@ func TestGetExpressionsByOncallGroTmp (t *testing.T) {
 
 func TestGetExpressionsByOncallGro (t *testing.T) {
 	myFalcon := falcon.FALCON{
-		AccessKeyId: "AKWS3GA5E6XCDMWEU4",
-		SecretAccessKeyId: "KHFTmVutRHamO5Tu2/S8EQqlSfgXfDgjQC/wwSvc",
+		AccessKeyId: "xxxxxxxx",
+		SecretAccessKeyId: "xxxxxxxxx",
 	}
 
 	status := myFalcon.GetApiKey()
@@ -106,7 +106,7 @@ func TestGetExpressionsByOncallGro (t *testing.T) {
 		return
 	}
 
-	onCallGroupName := "【p1】miot-smarthome-oncall"
+	onCallGroupName := "【xxxxxl"
 	//onCallGroupName := "testPoint"
 	if expressionsByOncallGroList, errMsg := myFalcon.GetExpressionsByOncallGro(onCallGroupName); errMsg == nil {
 		fmt.Println("Falcon count：", (*expressionsByOncallGroList).Count)
@@ -177,8 +177,8 @@ func TestModLabels (t *testing.T) {
 
 func TestGetTemplatesByOnCallGro (t *testing.T) {
 	myFalcon := falcon.FALCON{
-		AccessKeyId: "AKWS3GA5E6XCDMWEU4",
-		SecretAccessKeyId: "KHFTmVutRHamO5Tu2/S8EQqlSfgXfDgjQC/wwSvc",
+		AccessKeyId: "xxxxxxx",
+		SecretAccessKeyId: "xxxxxxxxxx",
 	}
 
 	status := myFalcon.GetApiKey()
@@ -197,8 +197,8 @@ func TestGetTemplatesByOnCallGro (t *testing.T) {
 
 func TestGetTemplatesByID (t *testing.T) {
 	myFalcon := falcon.FALCON{
-		AccessKeyId: "AKWS3GA5E6XCDMWEU4",
-		SecretAccessKeyId: "KHFTmVutRHamO5Tu2/S8EQqlSfgXfDgjQC/wwSvc",
+		AccessKeyId: "xxxxxx",
+		SecretAccessKeyId: "xxxxxx",
 	}
 
 	status := myFalcon.GetApiKey()
@@ -215,7 +215,7 @@ func TestGetTemplatesByID (t *testing.T) {
 }
 
 func TestModTagsTmp (t *testing.T) {
-	tags := "job=mife|ngin,path=/,cluster=c3|c4|ak,pdl=gameunion,service=mife|aaa"
+	tags := "xxx=xxx|ngin,xx=xxx,xx=xx|xxx,xx=xxx,xxx=xx|xxx"
 	modList := []string{"cluster", "c4", "ak"}
 
 	modTags := []string{}
@@ -283,8 +283,8 @@ func TestModTagsTmp (t *testing.T) {
 
 func TestGetStrategyByTempID (t *testing.T) {
 	myFalcon := falcon.FALCON{
-		AccessKeyId: "AKWS3GA5E6XCDMWEU4",
-		SecretAccessKeyId: "KHFTmVutRHamO5Tu2/S8EQqlSfgXfDgjQC/wwSvc",
+		AccessKeyId: "xxxx",
+		SecretAccessKeyId: "xxxxxxxx",
 	}
 
 	status := myFalcon.GetApiKey()
@@ -308,8 +308,8 @@ func TestGetStrategyByTempID (t *testing.T) {
 
 func TestModStrategyWay (t *testing.T) {
 	myFalcon := falcon.FALCON{
-		AccessKeyId: "AKWS3GA5E6XCDMWEU4",
-		SecretAccessKeyId: "KHFTmVutRHamO5Tu2/S8EQqlSfgXfDgjQC/wwSvc",
+		AccessKeyId: "xxxxx",
+		SecretAccessKeyId: "xxxxxxxxx",
 	}
 
 	status := myFalcon.GetApiKey()
@@ -360,8 +360,8 @@ func TestModStrategyWay (t *testing.T) {
 
 func TestModStrategyByTempID (t *testing.T) {
 	myFalcon := falcon.FALCON{
-		AccessKeyId: "AKWS3GA5E6XCDMWEU4",
-		SecretAccessKeyId: "KHFTmVutRHamO5Tu2/S8EQqlSfgXfDgjQC/wwSvc",
+		AccessKeyId: "xxxxxxxx",
+		SecretAccessKeyId: "xxxxxxxxx",
 	}
 
 	status := myFalcon.GetApiKey()
@@ -378,32 +378,3 @@ func TestModStrategyByTempID (t *testing.T) {
 		fmt.Println("修改模板下的策略失败")
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
