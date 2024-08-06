@@ -119,9 +119,9 @@ func main() {
 			if ok := myFalcon.ModExprLabelByOnCallGroService(onCallGroupName, &modList); !ok {
 				fmt.Println("修改表达式失败")
 			}
-			//if errMsg := myFalcon.ModTempansStraTagByOnCallGroService(onCallGroupName, &modList); errMsg != nil{
-			//	fmt.Println("模板和策略修改失败：", *errMsg)
-			//}
+			if errMsg := myFalcon.ModTempansStraTagByOnCallGroService(onCallGroupName, &modList); errMsg != nil{
+				fmt.Println("模板和策略修改失败：", *errMsg)
+			}
 			fmt.Println("修改成功")
 
 		case "exit":
