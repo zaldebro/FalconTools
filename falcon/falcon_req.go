@@ -8,12 +8,9 @@ import (
 	"net/http"
 )
 
-// https://wiki.n.miui.com/pages/viewpage.action?pageId=536078551
 
 func (f *FALCON) GetApiKey () (bool){
-	// curl -i -X GET 'http://api.falcon.srv/api/v2/auth/key' -H 'ak:AKWS3GA5E6XCDMWEU4' -H 'sk:KHFTmVutRHamO5Tu2/S8EQqlSfgXfDgjQC/wwSvc'
-	// X-Api-Key: 667571696e67666569/7995a5879c8aa06041f1ad947206a31ff9cb651a770a78cbe5d62351ab4a3d2a6a07d8bfd7c1e3a951e18c7a275e9f0b
-	req, _ := http.NewRequest("GET", "http://api.falcon.srv/api/v2/auth/key", nil)
+	req, _ := http.NewRequest("GET", "xxxxxxxxx", nil)
 	// 添加 ak、sk
 	req.Header.Set("ak", f.AccessKeyId)
 	req.Header.Set("sk",f.SecretAccessKeyId)
@@ -37,7 +34,7 @@ func (f *FALCON) GetApiKey () (bool){
 }
 
 func (f *FALCON) GetInfos (path string) (*[]byte, error) {
-	backEnd := "http://api.falcon.srv/api/v2"
+	backEnd := "xxxxx"
 	url := backEnd + path
 	req, _ := http.NewRequest("GET", url, nil)
 	// 设置 api key
@@ -56,7 +53,7 @@ func (f *FALCON) GetInfos (path string) (*[]byte, error) {
 }
 
 func (f *FALCON) PostInfos (path string, params interface{}) (*[]byte, error){
-	backEnd := "http://api.falcon.srv/api/v2"
+	backEnd := "xxxxxxxx"
 	url := backEnd + path
 	b, err := json.Marshal(params)
 	if err != nil {
@@ -92,7 +89,7 @@ func (f *FALCON) PostInfos (path string, params interface{}) (*[]byte, error){
 }
 
 func (f *FALCON) PutInfos (path string, params interface{}) (*[]byte, error){
-	backEnd := "http://api.falcon.srv/api/v2"
+	backEnd := "xxxxxxxxx"
 	url := backEnd + path
 	b, err := json.Marshal(params)
 	if err != nil {
